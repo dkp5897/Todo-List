@@ -1,0 +1,13 @@
+body{
+  background-color: darkolivegreen;
+}
+
+.App{
+  background-color: azure;
+  width: 350px;
+  border-radius: 20px;
+  /* display: inline; */
+  margin: auto;
+  /* position: absolute;
+  top: 0;bottom: 0;left: 0;right: 0; */
+}
