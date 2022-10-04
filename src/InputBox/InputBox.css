@@ -1,18 +1,20 @@
 .input-box{
-    width: 350px;
+    width: 650px;
     height: 150px;
     /* border: 1px solid; */
-    margin: 50px auto;
-    display: block;
-    background-color: cornflowerblue;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    /* border-radius: 20px; */
+    margin:50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(228, 231, 238);
+    position: absolute;
+    left: 0;right: 0;bottom: 0;top: 0;
+    border-radius: 20px;
 }
 
 input{
-    width: 70%;
-    margin-top:30px ;
+    width: 60%;
+    margin:30px ;
     height: 40px;
     border-radius: 15px;
     font-size: 20px;
@@ -20,8 +22,9 @@ input{
 }
 
 .add-btn{
-    width: 60%;
-    margin-top: 30px;
+    /* display: inline; */
+    width: 20%;
+    margin: 30px;
     height: 30px;
     font-size: 20px;
     font-weight: 700;

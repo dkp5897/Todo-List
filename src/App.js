@@ -66,7 +66,7 @@ function App() {
         onEditSubmit={onEditSubmit}
       />
 
-      {getList.length>0 && <h1>Your List is Here</h1>}
+      {/* {getList.length>0 && <h1>Your List is Here</h1>} */}
       {getList && getList.length > 0 && (
         <ListBox
           onDelete={onDeleteHandler}

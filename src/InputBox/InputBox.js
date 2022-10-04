@@ -6,7 +6,7 @@ function InputBox(props) {
       <input type="text" name="input" value={props.value} onChange={props.onChangeHandler} />
       {props.buttonStatus ? (
         <button className="add-btn" onClick={props.onEditSubmit}>
-          Edit
+        <i class="fa-solid fa-check"></i>
         </button>
       ) : (
         <button className="add-btn" onClick={props.addHandler}>
