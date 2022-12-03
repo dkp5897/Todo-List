@@ -1,11 +1,25 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import InputBox from "./InputBox/InputBox";
 import ListBox from "./ListContainer/ListBox";
 
+
+//getting data from storage
+
+const getLocalItems = () =>{
+  const list = localStorage.getItem('listItem');
+  // console.log(list);
+  if(list){
+    return JSON.parse(localStorage.getItem('listItem'));
+  }else{
+    return [];
+  }
+}
+
 function App() {
   const [getText, setText] = useState("");
-  const [getList, setList] = useState([]);
+  // const [getList, setList] = useState([]);
+  const [getList, setList] = useState(getLocalItems());
   const [getEdit, setEdit] = useState(false);
   // for edit submit
   const [getIndex, setIndex] = useState(-1);
@@ -16,6 +30,14 @@ function App() {
     // console.log(event.target.value);
     setText(event.target.value);
   };
+
+  
+
+
+  // sending data in localStorage
+  useEffect(()=>{
+    localStorage.setItem('listItem',JSON.stringify(getList));
+  },[getList]) 
 
   // adding data on click
   const addTask = () => {
